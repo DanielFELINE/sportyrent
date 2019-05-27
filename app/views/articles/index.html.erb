@@ -1,1 +1,9 @@
 <h1>Tous nos articles de sport</h1>
+<div class="container">
+  <div class="card-grid">
+    <% @articles.each do |a| %>
+      <h2><%= a.name  %></h2>
+      <% render  "shared/sport_cards", article: article %>
+    <% end %>
+  </div>
+</div>
