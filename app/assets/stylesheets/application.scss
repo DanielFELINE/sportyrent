@@ -12,6 +12,22 @@
 @import "components/index";
 @import "pages/index";
 
+<<<<<<< HEAD
 @import "components/articles_cards";
 
 @import "components/sport_cards";
+=======
+html, body {
+  height: 100vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.main_container {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+>>>>>>> 7ed6386f60c8871b2aa38a403747958fd0fa627c
