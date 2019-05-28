@@ -1,6 +1,12 @@
 .navbar-sportyrent {
   justify-content: space-between;
   background: white;
+  padding-top: 0;
+  padding-bottom: 0;
+  a {
+    text-decoration: none;
+    font-size: 25px;
+  }
 }
 
 .navbar-sportyrent .navbar-collapse {
@@ -9,4 +15,8 @@
 
 .navbar-sportyrent .navbar-brand img {
   width: 60px;
+}
+
+.nav-item {
+  font-size: 10px;
 }
