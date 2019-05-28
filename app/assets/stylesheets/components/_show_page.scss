@@ -1,0 +1,47 @@
+.show-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  height: 300px;
+}
+.image-show img {
+  border-radius: 5px;
+  background-image: cover;
+}
+.description {
+  border: 1px solid #D2BBA0;
+  padding: 16px;
+  text-align: left;
+  position: relative;
+  border-radius: 5px;
+  p {
+    font-family: 'Hind';
+    font-size: 16px;
+
+  }
+  a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #D2BBA0;
+    color: #9F7E69;
+    border: none;
+    &:hover {
+      background-color: #9F7E69;
+    }
+  }
+  .price {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+  }
+}
+.form-group {
+  border: 1px solid #D2BBA0;
+  padding: 16px;
+  border-radius: 5px;
+  & .controls {
+    text-align: space-between;
+  }
+}
