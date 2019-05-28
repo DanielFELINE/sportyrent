@@ -1,5 +1,5 @@
 <div class="card-trip">
-  <img src=<%= article.photo %>>
+  <%= cl_image_tag article.photo, height: 300, width: 400, crop: :fill %>
   <div class="card-trip-infos">
     <div>
       <h2><%= article.name %></h2>
