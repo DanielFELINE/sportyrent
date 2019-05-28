@@ -1,20 +1,22 @@
-<div class="container">
-  <div class="show-page">
-      <div class='image-show'>
-      <%= cl_image_tag @article.photo %>
-      <div class="description">
-      <h1><%= @article.name %></h1>
-      <p>j'ai plein de trucs intéressants à dire</p>
-      <p>en fait, c'est vrai super ce produit, louez-le !!!</p>
-      <p class="price"><%= @article.price %> € par jour</p>
+<div class="show-page">
+  <div class="card-trip">
+    <%= cl_image_tag @article.photo %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @article.name %></h2>
+        <br>
+        <p>j'ai plein de trucs intéressants à dire</p>
+        <p>en fait, c'est vrai super ce produit, louez-le !!!</p>
+        <p>est-ce que cela dépasse ?</p>
+        <p>oui</p>
+      </div>
+      <h2 class="card-trip-pricing"><%= @article.price %> € par jour</h2>
       <%= link_to 'Back to our articles', articles_path, class: 'btn btn-primary' %>
-      </div>
-      </div>
-      <form action="">
-      <!--  General -->
+  </div>
+</div>
+
       <div class="form-group">
         <h2 class="heading">Formulaire de location</h2>
-        <!--  Details -->
           <div class="form-form">
             <div class="grid">
               <div class="col-1-4 col-1-4-sm">
@@ -28,18 +30,15 @@
                   <input type="date" id="rent-end" name="end">
                   <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Fin de location</label>
                 </div>
+                </div>
                 <div class="rent-sum-up">
                   <p>jours de location : x</p>
                   <p>prix par jour de location</p>
                   <h5>Total : tant euro</p>
                 </div
-              </div>
             </div>
             <button type="button" class="btn btn-outline-secondary" value="Submit">Je loue</button>
           </div>
-          <!-- /.form-group -->
-        </form>
       </div>
     </div>
   </div>
-</div>

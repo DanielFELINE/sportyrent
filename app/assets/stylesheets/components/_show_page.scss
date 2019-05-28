@@ -1,46 +1,60 @@
 .show-page {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-gap: 16px;
-  height: 300px;
+  height: 500px;
 }
-.image-show img {
-  border-radius: 5px;
-  background-image: cover;
-}
-.description {
-  border: 1px solid #D2BBA0;
-  padding: 16px;
-  text-align: left;
-  position: relative;
-  border-radius: 5px;
-  p {
-    font-family: 'Hind';
-    font-size: 16px;
 
-  }
-  a {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: #D2BBA0;
-    color: #9F7E69;
-    border: none;
-    &:hover {
-      background-color: #9F7E69;
-    }
-  }
-  .price {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-weight: bold;
-  }
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: stretch;
+  height: 100% !important;
 }
+
+.card-trip > img {
+  height: 250px !important;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  height: 250px;
+}
+
+.card-trip-infos .card-trip-pricing {
+  position: absolute;
+  width: 100px;
+  text-align: justify;
+  right: 10px;
+  top: 10px;
+  font-weight: bold;
+}
+
 .form-group {
   border: 1px solid #D2BBA0;
   padding: 16px;
   border-radius: 5px;
+  height: 100%;
   & .controls {
     text-align: space-between;
   }
