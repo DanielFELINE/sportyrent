@@ -3,10 +3,9 @@
   <%= render  "shared/sport_cards" %>
   <div class="card-category">
     <div class="cards">
-
       <% @articles.each do |a| %>
-      <%= link_to article_path(a) do  %>
-        <%= render  "shared/articles_cards", article: a %>
+        <%= link_to article_path(a) do  %>
+          <%= render  "shared/articles_cards", article: a %>
         <% end %>
       <% end %>
     </div>
