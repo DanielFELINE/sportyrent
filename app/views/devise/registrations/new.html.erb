@@ -5,7 +5,7 @@
     <div class="form-inputs">
       <div class="row">
         <div class="col-sm-6">
-          <%= f.input :first_name, required: true, label: "Prénom"  %>
+          <%= f.input :first_name, required: true, label: "Prénom", autofocus: true  %>
         </div>
         <div class="col-sm-6">
           <%= f.input :last_name, required: true, label: "Nom" %>
@@ -13,7 +13,6 @@
         <div class="col-sm-6">
           <%= f.input :email,
                 required: true,
-                autofocus: true,
                 label: "Adresse email",
                 input_html: { autocomplete: "email" }%>
         </div>

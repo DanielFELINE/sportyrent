@@ -1,18 +1,18 @@
 <div class="body-user-edit">
-  <h2>Mettez à jour votre profil <%= resource_name.to_s.humanize %></h2>
+  <h2>Mettre à jour votre profil <%= resource_name.to_s.humanize %></h2>
   <div class="shadow-sm p-3 mb-5 bg-white rounded">
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= f.error_notification %>
       <div class="form-inputs">
         <div class="row">
           <div class="col-sm-6">
-            <%= f.input :first_name, required: true, label: "Prénom"  %>
+            <%= f.input :first_name, required: true, label: "Prénom", autofocus: true %>
           </div>
           <div class="col-sm-6">
             <%= f.input :last_name, required: true, label: "Nom" %>
           </div>
           <div class="col-sm-6">
-            <%= f.input :email, required: true, autofocus: true, label: "Adresse email" %>
+            <%= f.input :email, required: true, label: "Adresse email" %>
             <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
               <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
             <% end %>
