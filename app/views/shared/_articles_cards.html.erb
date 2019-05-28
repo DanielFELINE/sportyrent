@@ -1,11 +1,11 @@
 <div class="card-trip">
-  <img src=<%= article.photo %>>
+  <%= cl_image_tag article.photo, height: 300, width: 400, crop: :fill %>
   <div class="card-trip-infos">
     <div>
       <h2><%= article.name %></h2>
-      <p>Short description here!</p>
-    </div>
-    <h2 class="card-trip-pricing">€</h2>
-    <!-- <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/> -->
+      <p> <%= article.description %></p>
+      </div>
+    <h2 class="card-trip-pricing"><%= article.price %>€</h2>
   </div>
 </div>
+
