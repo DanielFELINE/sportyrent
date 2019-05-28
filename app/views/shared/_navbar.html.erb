@@ -1,19 +1,24 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-sportyrent">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= cl_image_tag("458507-PFNGV5-613_no2kjd.jpg", :height=>80, :crop=>"thumb") %>
-  <% end %>
+<div class="navbar navbar-expand-sm navbar-light navbar-sportyrent sticky-top">
+  <div class="d-flex align-items-center">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= cl_image_tag("458507-PFNGV5-613_no2kjd.jpg", :height=>60, :crop=>"thumb") %>
+    <% end %>
+    <h1>SportyRent</h1>
+  </div>
+  <div>
+    <nav class="navbar navbar-light">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+      </form>
+    </nav>
+  </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse sticky" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <div><nav class="navbar navbar-light bg-light">
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-            </form>
-          </nav></div>
         <div class="main-header-accueil">
           <li class="nav-item active">
             <%= link_to "Accueil", "/", class: "nav-link" %>
