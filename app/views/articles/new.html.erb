@@ -1,1 +1,10 @@
 <h1>Test new article</h1>
+
+<%= simple_form_for @article do |f| %>
+  <%= f.input :name %>
+  <%= f.input :sport %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.file_field :image %>
+  <%= f.button :submit %>
+<% end %>
