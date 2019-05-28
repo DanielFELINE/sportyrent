@@ -18,6 +18,7 @@ user = User.create!({
   phone_number: "1234566"
   })
 
+
 20.times do |a|
   Article.create!(
     user: user,
