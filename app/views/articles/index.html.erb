@@ -1,14 +1,12 @@
 <h1>Tous nos articles de sport</h1>
-
-  <%= render  "shared/sport_cards" %>
-  <div class="card-category">
-    <div class="cards">
-
-      <% @articles.each do |a| %>
-      <%= link_to article_path(a) do  %>
-        <%= render  "shared/articles_cards", article: a %>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
+<%= render "shared/sport_cards" %>
+<%#= render "sport/cards" %>
+<div class="cards">
+  <% @articles.each do |article| %>
+  <%= link_to article_path(article) do  %>
+    <%= render "shared/articles_cards", article: article %>
+    <%#= render "shared/card", article: article %>
+    <% end %>
+  <% end %>
+</div>
 
