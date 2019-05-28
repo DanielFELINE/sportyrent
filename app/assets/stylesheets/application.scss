@@ -12,7 +12,12 @@
 @import "components/index";
 @import "pages/index";
 
-html, body {
+@import "components/articles_cards";
+
+@import "components/sport_cards";
+
+html,
+body {
   height: 100vh;
 }
 body {
