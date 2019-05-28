@@ -5,6 +5,7 @@
   <%= f.input :sport %>
   <%= f.input :description %>
   <%= f.input :price %>
-  <%= f.file_field :image %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.button :submit %>
 <% end %>
