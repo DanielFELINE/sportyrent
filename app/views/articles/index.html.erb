@@ -1,2 +1,11 @@
 <h1>Tous nos articles de sport</h1>
-
+<div class="container">
+  <%= render  "shared/sport_cards" %>
+  <div class="card-category">
+    <div class="cards">
+      <% @articles.each do |a| %>
+        <%= render  "shared/articles_cards", article: a %>
+      <% end %>
+    </div>
+  </div>
+</div>
