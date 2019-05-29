@@ -5,8 +5,10 @@ class ArticlesController < ApplicationController
 
   def index
     if params[:sport].nil?
+      @filtered = false
       @articles = Article.all
     else
+      @filtered = true
       @articles = Article.where(sport: params[:sport])
     end
   end
@@ -45,11 +47,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
   end
-
-  def filter
-    redirect_to articles_path(params[:sport])
-  end
-
+  
   private
 
   def set_article
