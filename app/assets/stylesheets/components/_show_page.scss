@@ -10,6 +10,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 .card-show > img {
@@ -27,6 +28,21 @@
   opacity: .7;
   margin: 0;
 }
+
+.card-show .card-show-infos > img {
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: absolute;
+  top: 100px;
+  right: 45px;
+}
+.card-show .card-show-infos .avatar-name {
+  position: absolute;
+  top: 150px;
+  right: 40px;
+}
+
 
 .card-show .card-show-infos {
   padding: 16px;

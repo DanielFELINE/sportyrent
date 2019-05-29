@@ -13,11 +13,11 @@ const calculatePrice = () => {
             let oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
             let diffDays = Math.round(Math.abs((startDate.getTime() - endDate.getTime())/(oneDay)));
             document.querySelector("#days_of_rent").innerHTML = `${diffDays + 1}`;
-            const rentalPrice = parseInt(document.getElementById("article_price"), 10);
+            const rentalPrice = parseInt(document.getElementById("article_price").innerText, 10);
             console.log(rentalPrice);
-            const totalPrice = `${(diffDays + 1) * rentalPrice}€ for ${diffDays + 1} day(s) rental`;
+            const totalPrice = `${(diffDays + 1) * rentalPrice}€ pour ${diffDays + 1} jour(s) de location`;
             if (endDate < startDate) {
-                const errorMessage = `<span class="text-danger">End date can't be before Start date</span>`;
+                const errorMessage = `<span class="text-danger">Attention date de fin antérieure à la date de début</span>`;
                 document.getElementById("total").innerHTML = errorMessage;
             } else {
                 document.getElementById("total").innerHTML = totalPrice ;
