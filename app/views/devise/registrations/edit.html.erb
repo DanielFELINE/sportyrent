@@ -20,6 +20,9 @@
           <div class="col-sm-6">
             <%= f.input :phone_number, required: false, label: "Numéro de téléphone" %>
           </div>
+          <div class="col-sm-12">
+            <%= f.input :address, required: true, label: "Adresse postale" %>
+          </div>
           <div class="col-sm-4">
             <%= f.input :current_password,
                 hint: "renseignez votre mot de passe actuel pour enregistrer tout changement",
@@ -40,6 +43,8 @@
           </div>
         </div>
       </div>
+      <%= f.input :picture, label: "Photo de profil"%>
+      <%= f.input :picture_cache, as: :hidden %>
     </div>
     <div class="form-actions btn btn-outline-primary btn-lg btn-block user-edit-btn">
       <%= f.button :submit, "Mettre à jour" %>

@@ -20,17 +20,17 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <div class="main-header-accueil">
-          <li class="nav-item active">
-            <%= link_to "Accueil", articles_path, class: "nav-link" %>
+          <li class="nav-item active home-sign-name-display">
+            <%= "Bonjour " %><%= current_user.first_name %> <%=  current_user.last_name %>
           </li>
         </div>
         <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/lanfeustv", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= cl_image_tag current_user.picture, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Ajouter un article", new_article_path, class: "dropdown-item" %>
             <%= link_to "Mes favoris", articles_path, class: "dropdown-item" %>
             <%= link_to "Mes demandes de location", articles_path, class: "dropdown-item" %>
-            <%= link_to "Mettre à jour mon profile", edit_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "Mettre à jour mon profil", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
