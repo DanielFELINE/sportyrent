@@ -1,0 +1,61 @@
+.show-page {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 16px;
+  height: 500px;
+}
+
+.card-show {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: stretch;
+  height: 100% !important;
+}
+
+.card-show > img {
+  height: 250px !important;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-show h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-show p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-show .card-show-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  height: 250px;
+}
+
+.card-show-infos .card-show-pricing {
+  position: absolute;
+  width: 100px;
+  text-align: justify;
+  right: 10px;
+  top: 10px;
+  font-weight: bold;
+}
+
+.form-group {
+  border: 1px solid #D2BBA0;
+  padding: 16px;
+  border-radius: 5px;
+  height: 100%;
+  & .controls {
+    text-align: space-between;
+  }
+}

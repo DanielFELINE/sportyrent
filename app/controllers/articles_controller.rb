@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
-  before_action :set_article, only: [:show]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
     @articles = Article.all
@@ -8,6 +8,10 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+  end
+
+  def show
+    @article = Article.find(params[:id])
   end
 
   def create
@@ -18,6 +22,22 @@ class ArticlesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+  end
+
+  def update
+    if @article.update(article_params)
+      redirect_to article_path(@article)
+    else
+      render :edit
+    end
+    # Will raise ActiveModel::ForbiddenAttributesError
+  end
+
+  def destroy
+    @article.destroy
   end
 
   private

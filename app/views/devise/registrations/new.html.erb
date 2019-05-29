@@ -1,37 +1,45 @@
 <h2>Inscription</h2>
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-  <div class="form-inputs">
-    <div class="row">
-      <div class="col-sm-6">
-        <%= f.input :first_name, required: true  %>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :last_name, required: true %>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :email,
+<div class="shadow-sm p-3 mb-5 bg-white rounded">
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <div class="row">
+        <div class="col-sm-6">
+          <%= f.input :first_name, required: true, label: "Prénom", autofocus: true  %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :last_name, required: true, label: "Nom" %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :email,
                 required: true,
-                autofocus: true,
+                label: "Adresse email",
                 input_html: { autocomplete: "email" }%>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :phone_number, required: false %>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :password,
-                required: true,
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :phone_number, required: false, label: "Numéro de téléphone" %>
+        </div>
+        <div class="col-sm-12">
+          <%= f.input :address, required: true, label: "Adresse postale" %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :password,
+                required: true, label: "Mot de passe",
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :password_confirmation,
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :password_confirmation,
                 required: true,
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password" }, label: "Confirmation du mot de passe" %>
+        </div>
       </div>
-    </div>
-    <div class="form-actions btn btn-outline-primary btn-lg btn-block user-edit-btn">
-      <%= f.button :submit, "S'inscrire" %>
-    </div>
-  <% end %>
-  <%= render "devise/shared/links" %>
+      <%= f.input :picture, label: "Photo de profil"%>
+      <%= f.input :picture_cache, as: :hidden %>
+      <div class="form-actions btn btn-outline-primary btn-lg btn-block user-edit-btn">
+        <%= f.button :submit, "S'inscrire" %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
