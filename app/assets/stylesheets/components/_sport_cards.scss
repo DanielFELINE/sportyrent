@@ -1,7 +1,6 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,8 +16,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  height: 200px;
   border-bottom: 40px;
+  p {
+    padding: 10px;
+    margin: 5px;
+  }
 }
 
 // Smallest device
