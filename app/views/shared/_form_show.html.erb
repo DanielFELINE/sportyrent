@@ -6,11 +6,11 @@
         <%= f.input :ending_date, label: "Fin de la location" %>
       <div class="details">
       <p>jours de location : <span id="days_of_rent"></span></p>
-      <p>prix par jour de location : ><span id="article_price"><%= @article.price %></span> €</p>
+      <p>prix par jour de location : <span id="article_price"><%= @article.price %></span> €</p>
     </div>
     <div class="rent-price">
         <h5>Total : <span id="total"></span></h5>
     </div>
-      <%= f.button :submit, label: "Je loue" %>
+      <%= f.button :submit, class: 'btn btn-outline-secondary', value: "Je loue" %>
     <% end %>
 </div>
