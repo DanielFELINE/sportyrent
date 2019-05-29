@@ -1,0 +1,15 @@
+<%= render "shared/banner" %>
+<div class="container">
+  <%= <h2>Tous nos articles de sport</h2>%>
+  <%= render  "shared/sport_cards" %>
+  <div class="card-category">
+    <div class="cards">
+      // if @articles.sport == "Tennis"
+      <% @articles.each do |a| %>
+        <%= link_to article_path(a) do  %>
+          <%= render  "shared/articles_cards", article: a %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -4,7 +4,11 @@ class ArticlesController < ApplicationController
 
 
   def index
-    @articles = Article.all
+    if params[:sport].nil?
+      @articles = Article.all
+    else
+      @articles = Article.where(sport: params[:sport])
+    end
   end
 
   def new
@@ -40,6 +44,10 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
+  end
+
+  def filter
+    redirect_to articles_path(params[:sport])
   end
 
   private

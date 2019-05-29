@@ -1,3 +1,13 @@
+.index-sport-card {
+  color: white;
+  text-decoration: none;
+}
+
+.index-sport-card:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -10,7 +20,7 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  padding: 20px
+  padding: 20px;
 }
 .cards {
   display: grid;

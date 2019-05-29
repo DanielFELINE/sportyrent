@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get 'filter/:sport', to: 'articles#index', as: :specific_articles 
   get 'bookings/new'
   get 'bookings/create'
   root 'articles#index'
