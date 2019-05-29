@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%= render "shared/banner" %>
 <div class="container">
   <h2>Tous nos articles de sport</h2>
@@ -12,17 +11,4 @@
       <% end %>
     </div>
   </div>
-=======
-<h1>Tous nos articles de sport</h1>
-<%= render "shared/sport_cards" %>
-<%#= render "sport/cards" %>
-<div class="cards">
-  <% @articles.each do |article| %>
-  <%= link_to article_path(article) do  %>
-    <%= render "shared/articles_cards", article: article %>
-    <%#= render "shared/card", article: article %>
-    <% end %>
-  <% end %>
->>>>>>> origin
 </div>
-
