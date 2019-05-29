@@ -19,6 +19,9 @@
         <div class="col-sm-6">
           <%= f.input :phone_number, required: false, label: "Numéro de téléphone" %>
         </div>
+        <div class="col-sm-12">
+          <%= f.input :address, required: true, label: "Adresse postale" %>
+        </div>
         <div class="col-sm-6">
           <%= f.input :password,
                 required: true, label: "Mot de passe",
