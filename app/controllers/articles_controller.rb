@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @booking = Booking.new
   end
 
   def create
