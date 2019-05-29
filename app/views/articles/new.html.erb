@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+<h1>Test new article</h1>
+<div class="container">
+  <%= simple_form_for @article do |f| %>
+    <%= f.input :name %>
+    <%= f.input :sport %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.button :submit %>
+=======
 <h1>Ajouter un nouvel article</h1>
 <div class="shadow-sm p-3 mb-5 bg-white rounded">
   <%= simple_form_for @article do |f| %>
@@ -8,5 +20,6 @@
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
     <%= f.button :submit, label: "Créer" %>
+>>>>>>> origin
   <% end %>
 </div>
