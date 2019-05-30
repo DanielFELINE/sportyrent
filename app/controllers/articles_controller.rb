@@ -15,7 +15,8 @@ class ArticlesController < ApplicationController
       @markers = @articles.map do |article|
         {
           lat: article.latitude,
-          lng: article.longitude
+          lng: article.longitude,
+          infoWindow: render_to_string(partial: "infowindow", locals: { article: article })
         }
       end
     end
