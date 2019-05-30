@@ -9,19 +9,30 @@
 
 Article.destroy_all
 
-stephane = User.create!(
-  first_name: "stephane",
-  last_name: "vincent",
-  email: "test@test.com",
-  password: "123456",
+ricky = User.create!(
+  first_name: "Ricky",
+  last_name: "Bobby",
+  email: "ricky@bobby.com",
+  password: "azerty",
+  address: "lille",
+  picture: "/images/ricky-bobby"
 )
 
-5.times do |article|
+Michel = User.create!(
+  first_name: "Tony",
+  last_name: "Vairelles",
+  email: "tony@vairelles.com",
+  password: "azerty",
+  address: "paris",
+  picture: "https://img.sport.gentside.com/article/480/as-nancy/tony-vairelles-c-etait-d-abord-un-look_8a89b42b5b45c3e2795d31554148a66aa5c80604.jpg"
+)
+
+10.times do |article|
   Article.create!(
-    name: "ballon",
+    name: "Ballon"
     description: "parfait",
     sport: ["Football", "Tennis", "Volleyball"].sample,
-    photo: "https://images.unsplash.com/photo-1521731978332-9e9e714bdd20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80",
-    user: stephane,
+    photo: "https://source.unsplash.com/1600x900/?football,ball",
+    user_id: [1, 2].sample 
     )
 end
