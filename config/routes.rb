@@ -1,6 +1,6 @@
-Rails.application.routes.draw do
-  
+Rails.application.routes.draw do  
   get 'filter/:query', to: 'articles#index', as: :specific_articles 
+
   get 'bookings/new'
   get 'bookings/create'
   root 'articles#index'
@@ -10,4 +10,9 @@ Rails.application.routes.draw do
   resources :articles do
     resources :bookings, only: [:new, :create, :destroy]
   end
+
+  get '/users/:id', to: 'users#show', as: 'user'
+  get '/users/:id/reservations', to: 'users#reservations', as: 'reservations'  
+  get '/users/:id/articles', to: 'users#myprecious', as: 'my_precious'
+
 end

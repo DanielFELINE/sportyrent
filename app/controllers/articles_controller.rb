@@ -6,11 +6,20 @@ class ArticlesController < ApplicationController
   def index
     p params
     if params[:query].nil?
-      p "sans search"
-      p @articles = Article.all
+      @articles = Article.all
     else
-      p "avec search"
-      p @articles = Article.global_search(params[:query])
+      @articles = Article.global_search(params[:query])
+      @filtered = true
+      @articles = Article.where(sport: params[:sport])
+      @articles = Article.where.not(latitude: nil, longitude: nil)
+  
+      @markers = @articles.map do |article|
+        {
+          lat: article.latitude,
+          lng: article.longitude,
+          infoWindow: render_to_string(partial: "infowindow", locals: { article: article })
+        }
+      end
     end
   end
 
