@@ -11,6 +11,18 @@ class ArticlesController < ApplicationController
       @filtered = true
       @articles = Article.where(sport: params[:sport])
     end
+def index
+    @flats = Flat.where.not(latitude: nil, longitude: nil)
+
+    @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
+  end
+
+
   end
 
   def new
