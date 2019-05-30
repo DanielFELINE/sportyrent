@@ -32,7 +32,7 @@ Michel = User.create!(
     name: "Ballon"
     description: "parfait",
     sport: ["Football", "Tennis", "Volleyball"].sample,
-    photo: "https://source.unsplash.com/1600x900/?football,ball",
+    photo: "https://source.unsplash.com/1600x900/?soccer,ball",
     user_id: [1, 2].sample 
     )
 end
