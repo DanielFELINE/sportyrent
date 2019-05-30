@@ -2,9 +2,12 @@
   <div class="banner-content">
     <h1>POUR VOS EVENEMENTS SPORTIFS</h1>
     <p>louez vos équipements et profitez !</p>
-    <form class="form-inline d-flex justify-content-center">
-      <input class="form-control mr-lg-1" type="search" placeholder="Rechercher un article" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-    </form>
+    <%= form_tag articles_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control mr-lg-1",
+        placeholder: "chercher mon équipement ou mon sport"
+      %>
+    <% end %>
   </div>
 </div>

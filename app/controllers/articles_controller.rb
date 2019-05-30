@@ -4,12 +4,13 @@ class ArticlesController < ApplicationController
 
 
   def index
-    if params[:sport].nil?
-      @filtered = false
-      @articles = Article.all
+    p params
+    if params[:query].nil?
+      p "sans search"
+      p @articles = Article.all
     else
-      @filtered = true
-      @articles = Article.where(sport: params[:sport])
+      p "avec search"
+      p @articles = Article.global_search(params[:query])
     end
   end
 
@@ -45,7 +46,9 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    set_article
     @article.destroy
+    redirect_to articles_path
   end
   
   private

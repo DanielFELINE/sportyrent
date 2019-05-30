@@ -13,10 +13,11 @@
     <h2 class="card-show-pricing"></h2>
     <h3><%= @article.price %> € par jour</h3>
     <div class="trash-show">
-      <%= link_to article_path(@article), method: :delete, data: { confirm: 'Are you sure?'} do %>
+      <%= link_to article_path(), method: :delete, data: { confirm: 'Are you sure?'} do %>
         <span><i class="far fa-trash-alt"></i></span>
       <% end %>
     </div>
+    <div class="edit"><i class="far fa-edit"></i></div>
     <%= link_to 'Retour à la liste', articles_path, class: 'btn btn-outline-secondary' %>
   </div>
 </div>

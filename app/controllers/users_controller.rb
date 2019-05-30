@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
   def create
-    raise
   end
   
   def article_params
