@@ -1,9 +1,21 @@
+require 'date'
+
 class BookingsController < ApplicationController
   def new
   end
 
   def create
     @article = Article.find(params[:article_id])
+    year_1 = params["booking"]["starting_date(1i)"]
+    month_1 = params["booking"]["starting_date(2i)"]
+    day_1 = params["booking"]["starting_date(3i)"]
+    year_2 = params["booking"]["ending_date(1i)"]
+    month_2 = params["booking"]["ending_date(2i)"]
+    day_2 = params["booking"]["ending_date(3i)"]
+    
+    starting_date = Date.parse("#{year_1}-#{month_1}-#{day_1}")
+    ending_date = Date.parse("#{year_2}-#{month_2}-#{day_2}")
+    date = { starting_date: starting_date, ending_date: ending_date }
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.article = @article
