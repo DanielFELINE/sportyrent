@@ -27,12 +27,15 @@ Michel = User.create!(
   picture: "https://img.sport.gentside.com/article/480/as-nancy/tony-vairelles-c-etait-d-abord-un-look_8a89b42b5b45c3e2795d31554148a66aa5c80604.jpg"
 )
 
+url = "https://source.unsplash.com/1600x900/?soccer,ball"
+
 10.times do |article|
-  Article.create!(
-    name: "Ballon"
+  article = Article.new(
+    name: "Ballon",
     description: "parfait",
     sport: ["Football", "Tennis", "Volleyball"].sample,
-    photo: "https://source.unsplash.com/1600x900/?soccer,ball",
-    user_id: [1, 2].sample 
+    user_id: [1, 2].sample,
     )
+    article.remote_photo_url = url
+    article.save
 end
