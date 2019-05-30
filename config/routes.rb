@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   end
 
   get '/users/:id', to: 'users#show', as: 'user'
+  get '/users/:id/reservations', to: 'users#reservations', as: 'reservations'  
+  get '/users/:id/articles', to: 'users#myprecious', as: 'my_precious'
 
 end
