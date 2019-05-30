@@ -1,4 +1,5 @@
 <%= render "shared/banner" if !@filtered %>
+<%= render "shared/map" if @filtered %>
 <div class="container">
   <h2 class="mb-3">Nos Sports disponibles</h2>
   <%= render  "shared/sport_cards" %>
