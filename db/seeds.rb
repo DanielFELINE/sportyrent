@@ -9,11 +9,19 @@
 
 Article.destroy_all
 
+stephane = User.create!(
+  first_name: "stephane",
+  last_name: "vincent",
+  email: "test@test.com",
+  password: "123456",
+)
+
 5.times do |article|
   Article.create!(
     name: "ballon",
     description: "parfait",
     sport: ["Football", "Tennis", "Volleyball"].sample,
     photo: "https://images.unsplash.com/photo-1521731978332-9e9e714bdd20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80",
-  )
+    user: stephane,
+    )
 end
