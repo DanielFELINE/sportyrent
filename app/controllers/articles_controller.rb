@@ -10,6 +10,15 @@ class ArticlesController < ApplicationController
     else
       @filtered = true
       @articles = Article.where(sport: params[:sport])
+      @articles = Article.where.not(latitude: nil, longitude: nil)
+  
+      @markers = @articles.map do |article|
+        {
+          lat: article.latitude,
+          lng: article.longitude,
+          infoWindow: render_to_string(partial: "infowindow", locals: { article: article })
+        }
+      end
     end
   end
 
