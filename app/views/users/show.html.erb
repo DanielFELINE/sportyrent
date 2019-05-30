@@ -1,1 +1,14 @@
 <%= render "shared/menu_dashboard" %>
+<div class="user-show-rentals">
+  <h2> Mes reservations</h2>
+  <% @user.bookings.each do |reservation| %>
+    <%= reservation.article.name %>
+  <% end %>
+</div>
+<div class="user-show-commands">
+  <h2>Mes articles</h2>
+  <% @user.articles.each do |article| %>
+    <%= article.name %>
+  <% end %>
+</div>
+<div class="user-show-information"></div>
