@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
       render :new
     end
   end
-private
+  private
 
   def booking_params
     params.require(:booking).permit(:starting_date, :ending_date)
