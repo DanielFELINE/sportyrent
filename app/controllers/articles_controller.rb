@@ -4,22 +4,17 @@ class ArticlesController < ApplicationController
 
 
   def index
-    p params
     if params[:query].nil?
       @articles = Article.all
     else
       @articles = Article.global_search(params[:query])
-      @filtered = true
-      @articles = Article.where(sport: params[:sport])
-      @articles = Article.where.not(latitude: nil, longitude: nil)
-  
-      @markers = @articles.map do |article|
-        {
-          lat: article.latitude,
-          lng: article.longitude,
-          infoWindow: render_to_string(partial: "infowindow", locals: { article: article })
-        }
-      end
+    end
+    @markers = @articles.where.not(latitude: nil, longitude: nil).map do |article|
+      {
+        lat: article.latitude,
+        lng: article.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { article: article })
+      }
     end
   end
 
@@ -59,7 +54,7 @@ class ArticlesController < ApplicationController
     @article.destroy
     redirect_to articles_path
   end
-  
+
   private
 
   def set_article

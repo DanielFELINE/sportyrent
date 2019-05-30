@@ -5,15 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-
+puts "destroy_all"
+Booking.destroy_all
 Article.destroy_all
+User.destroy_all
 
 stephane = User.create!(
   first_name: "stephane",
   last_name: "vincent",
   email: "test@test.com",
   password: "123456",
+  address: "Lille"
 )
 
 5.times do |article|
