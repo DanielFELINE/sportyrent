@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  
-  get 'filter/:sport', to: 'articles#index', as: :specific_articles 
+
+  get 'filter/:sport', to: 'articles#index', as: :specific_articles
   get 'bookings/new'
   get 'bookings/create'
   root 'articles#index'
@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :bookings, only: [:new, :create]
   end
+
+  get '/users/:id', to: 'users#show', as: 'user'
+
 end
