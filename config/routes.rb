@@ -11,8 +11,6 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create, :destroy]
   end
 
-  get '/users/:id', to: 'users#show', as: 'user'
-  get '/users/:id/reservations', to: 'users#reservations', as: 'reservations'  
-  get '/users/:id/articles', to: 'users#myprecious', as: 'my_precious'
+  get '/users/dashboard', to: 'users#show', as: 'user'
 
 end

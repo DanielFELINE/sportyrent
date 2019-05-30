@@ -1,3 +1,5 @@
+puts "destroy_all"
+Booking.destroy_all
 Article.destroy_all
 User.destroy_all
 
@@ -8,9 +10,9 @@ ricky = User.create!(
   password: "azerty",
   address: "lille",
   picture: "/images/ricky-bobby"
-)
-
-michel = User.create!(
+  )
+  
+tony = User.create!(
   first_name: "Tony",
   last_name: "Vairelles",
   email: "tony@vairelles.com",
@@ -23,7 +25,7 @@ url = "https://source.unsplash.com/800x600/?soccer,ball"
 
 10.times do
   article = Article.new(
-    user: [michel, ricky].sample,
+    user: [tony, ricky].sample,
     name: "Ballon",
     description: "parfait",
     sport: ["Football", "Tennis", "Volleyball"].sample,

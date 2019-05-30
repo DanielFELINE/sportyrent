@@ -9,7 +9,7 @@
 .card-show {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 5px;
 }
@@ -26,7 +26,7 @@
 
 .card-show p {
   font-size: 16px;
-  opacity: .7;
+  opacity: 0.7;
   margin: 0;
 }
 
@@ -35,7 +35,7 @@
   top: 20px;
   right: 20px;
   justify-content: center;
-  & p{
+  & p {
     font-size: 12px;
   }
 }
@@ -57,7 +57,7 @@
   }
   & .trash-show {
     position: absolute;
-    font: #9F7E69 !important;
+    color: #9f7e69 !important;
     bottom: 16px;
     left: 16px;
   }
@@ -79,8 +79,8 @@
 }
 
 .form-show-group {
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border: 1px solid #D2BBA0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #d2bba0;
   padding-top: 16px;
   padding-left: 16px;
   padding-right: 16px;
@@ -98,14 +98,14 @@
     margin-top: 30px;
     margin-bottom: 20px;
     height: 150px;
-    border-top: 1px solid #D2BBA0;
+    border-top: 1px solid #d2bba0;
     padding-top: 16px;
     & h5 {
-      font-family: 'Josefin Sans';
+      font-family: "Josefin Sans";
       font-weight: bold;
       font-size: 18px;
-      color: #9F7E69;
-      vertical-align: middle; 
+      color: #9f7e69;
+      vertical-align: middle;
       text-align: center;
     }
   }
@@ -119,4 +119,3 @@
     }
   }
 }
-
