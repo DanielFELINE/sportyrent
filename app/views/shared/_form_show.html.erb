@@ -1,16 +1,19 @@
 <div class="form-show-group">
   <h2 class="heading">Formulaire de location</h2>
   <br>
-    <%= simple_form_for [@article, @booking] do |f| %>
-        <%= f.input :starting_date, label: "Début de la location" %>
-        <%= f.input :ending_date, label: "Fin de la location" %>
-      <div class="details">
+  <%= simple_form_for [@article, @booking] do |f| %>
+    <%= f.input :starting_date, label: "Début de la location" %>
+    <%= f.input :ending_date, label: "Fin de la location" %>
+    <div class="details">
       <p>jours de location : <span id="days_of_rent"></span></p>
       <p>prix par jour de location : <span id="article_price"><%= @article.price %></span> €</p>
+      <br>
+        <div class="rent-price">
+        <h5><span id="total"></span></h5>
+        </div>
     </div>
-    <div class="rent-price">
-        <h5>Total : <span id="total"></span></h5>
+    <div class="rent">
+      <%= f.button :submit, class: 'btn btn-outline-secondary', value: 'Je loue' %>
     </div>
-      <%= f.button :submit, class: 'btn btn-outline-secondary', value: "Je loue" %>
-    <% end %>
+  <% end %>
 </div>
