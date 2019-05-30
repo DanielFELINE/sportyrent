@@ -4,10 +4,11 @@ class ArticlesController < ApplicationController
 
 
   def index
-    if params[:sport].nil?
-      @filtered = false
+    p params
+    if params[:query].nil?
       @articles = Article.all
     else
+      @articles = Article.global_search(params[:query])
       @filtered = true
       @articles = Article.where(sport: params[:sport])
       @articles = Article.where.not(latitude: nil, longitude: nil)
@@ -54,7 +55,9 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    set_article
     @article.destroy
+    redirect_to articles_path
   end
   
   private

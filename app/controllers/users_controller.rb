@@ -2,7 +2,6 @@ class UsersController < ApplicationController
 before_action :set_user, only: [:show, :reservations, :myprecious]
 
   def create
-    raise
   end
 
   def show
