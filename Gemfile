@@ -18,6 +18,7 @@ gem 'webpacker'
 gem 'cloudinary', '~> 1.9.1'
 
 group :development do
+  gem 'awesome_print'
   gem 'web-console', '>= 3.3.0'
 end
 
@@ -32,3 +33,5 @@ end
 
 gem 'faker'
 gem 'carrierwave', '~> 1.2'
+gem 'pg_search'
+gem 'geocoder'

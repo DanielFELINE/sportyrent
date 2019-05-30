@@ -4,9 +4,27 @@ class Article < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   validates :sport, inclusion: { in: SPORTS }
 
+  include PgSearch
+  pg_search_scope :global_search,
+    against: [ :sport, :name ],
+    associated_against: {
+      user: [ :first_name, :last_name ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
+  geocoded_by :address 
+  after_validation :geocode
+  
+  def address
+    self.user.address
+  end
+
   private
 
   def default_values
     self.dispo ||= false
   end
 end
+

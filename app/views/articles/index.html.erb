@@ -1,7 +1,8 @@
-<%= render "shared/banner" if !@filtered %>
+<%= render "shared/banner" if params[:query].nil? %>
 <div class="container">
   <h2 class="mb-3">Nos Sports disponibles</h2>
   <%= render  "shared/sport_cards" %>
+  <%= render "shared/map" if @filtered %>
   <h2 class="mb-3">Nos articles disponibles</h2>
   <div class="card-category">
     <div class="cards">
