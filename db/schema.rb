@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 2019_05_30_111214) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "dispo"
     t.float "latitude"
     t.float "longitude"
-    t.boolean "dispo", default: false
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
