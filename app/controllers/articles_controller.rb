@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @booking = Booking.new
+    @review  = Review.new
   end
 
   def create
