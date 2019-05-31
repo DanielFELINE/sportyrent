@@ -1,6 +1,20 @@
 <div class="container">
-  <div class="show-page">
+  <div class="show-page mb-3">
     <%= render "shared/card_show" %>
     <%= render "shared/form_show" %>
+  </div>
+
+  <div class="shadow p-3 mb-5 bg-white rounded">
+  <%= simple_form_for [@article, @review] do |f| %>
+    <%= f.input :content, class: "shadow-sm p-3 mb-5 bg-white rounded", value: 'Ajoutez une review' %>
+    <%= f.button :submit %>
+  <% end %>
+
+  </div>
+
+  <div >
+    <% @article.reviews.each do |review| %>
+      <p class="border rouded p-3" style="background-color: white"><%= review.content  %></p>
+    <% end %>
   </div>
 </div>

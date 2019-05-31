@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
 
   def show
     @booking = Booking.new
+    @review  = Review.new
   end
 
   def create

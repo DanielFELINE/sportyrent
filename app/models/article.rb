@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
   belongs_to :user
+  has_many :reviews, dependent: :destroy
   after_initialize :default_values
   mount_uploader :photo, PhotoUploader
   validates :sport, inclusion: { in: SPORTS }
@@ -15,9 +16,9 @@ class Article < ApplicationRecord
       tsearch: { prefix: true }
     }
 
-  geocoded_by :address 
+  geocoded_by :address
   after_validation :geocode
-  
+
   def address
     self.user.address
   end
