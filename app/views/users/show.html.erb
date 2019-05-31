@@ -6,7 +6,6 @@
       <div class="cards">
         <% bookings_recus = @user.articles.map {|article| article.bookings.where(status: true)}.flatten %>
         <% bookings_recus.each do |reservation| %>
-          <%= bookings.start_date %>
           <%= render  "shared/articles_cards", article: reservation.article %>
         <% end %>
       </div>
