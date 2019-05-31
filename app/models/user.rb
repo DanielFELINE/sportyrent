@@ -7,4 +7,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   mount_uploader :picture, PhotoUploader
+
 end
