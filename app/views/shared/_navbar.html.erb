@@ -19,7 +19,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active home-sign-name-display">
+        <li class="nav-item active home-sign-name-display pt-3">
           <%= "Bonjour " %><%= current_user.first_name %> <%=  current_user.last_name %>
         </li>
         <li class="nav-item dropdown">
