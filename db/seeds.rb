@@ -61,6 +61,7 @@ url_article18 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559139184/t
 
 
 article1 = Article.new(
+  id: 1,
   user: francois,
   name: "Ballon",
   description: "Très rond",
@@ -71,6 +72,7 @@ article1.remote_photo_url = url_article1
 article1.save!
 
 article3 = Article.new(
+  id: 2,
   user: ricky,
   name: "Filet de beachvolley",
   description: "Pour des matchs endiablés",
@@ -81,6 +83,7 @@ article3.remote_photo_url = url_article3
 article3.save!
 
 article2 = Article.new(
+  id: 3,
   user: tony,
   name: "Jolies raquettes de tennis",
   description: "jamé servi j'aime pa le tennis",
@@ -91,6 +94,7 @@ article2.remote_photo_url = url_article2
 article2.save!
 
 article4 = Article.new(
+  id: 4,
   user: francois,
   name: "Protège-tibias",
   description: "Pour protéger les tibias",
@@ -101,6 +105,7 @@ article4.remote_photo_url = url_article4
 article4.save!
 
 article5 = Article.new(
+  id: 5,
   user: tony,
   name: "Equipe féminine",
   description: "Elle zont pas frois o zieu",
@@ -111,6 +116,7 @@ article5.remote_photo_url = url_article5
 article5.save!
 
 article6 = Article.new(
+  id: 6,
   user: ricky,
   name: "Lot de raquette",
   description: "Comme neuf pour jouer à 2",
@@ -121,6 +127,7 @@ article6.remote_photo_url = url_article6
 article6.save!
 
 article7 = Article.new(
+  id: 7,
   user: francois,
   name: "Grande raquette",
   description: "Pratique si vous avez des petits bras",
@@ -131,6 +138,7 @@ article7.remote_photo_url = url_article7
 article7.save!
 
 article8 = Article.new(
+  id: 8,
   user: tony,
   name: "Chaussures de foot avec des crampons",
   description: "Cé les mienne é el mark plin de but",
@@ -141,6 +149,7 @@ article8.remote_photo_url = url_article8
 article8.save!
 
 article9 = Article.new(
+  id: 9,
   user: ricky,
   name: "1000 balles de tennis",
   description: "Parce qu'on en a jamais trop",
@@ -151,6 +160,7 @@ article9.remote_photo_url = url_article9
 article9.save!
 
 article10 = Article.new(
+  id: 10,
   user: francois,
   name: "Filet",
   description: "Peu de trous",
@@ -161,6 +171,7 @@ article10.remote_photo_url = url_article10
 article10.save!
 
 article12 = Article.new(
+  id: 11,
   user: ricky,
   name: "Lot de ballon",
   description: "Pour ceux qui aiment beaucoup taper dans le ballon",
@@ -171,6 +182,7 @@ article12.remote_photo_url = url_article12
 article12.save!
 
 article11 = Article.new(
+  id: 12,
   user: tony,
   name: "shosset",
   description: "sous vent lavé pa tro 2 trou",
@@ -181,6 +193,7 @@ article11.remote_photo_url = url_article11
 article11.save!
 
 article14 = Article.new(
+  id: 13,
   user: tony,
   name: "1 ballon",
   description: "Pour joué ô vollay",
@@ -191,6 +204,7 @@ article14.remote_photo_url = url_article14
 article14.save!
 
 article13 = Article.new(
+  id: 14,
   user: francois,
   name: "Court Central de RG",
   description: "J'ai mes entrées VIP pour ceux qui voudraient taper la balle en douce",
@@ -202,6 +216,7 @@ article13.save!
 
 
 article15 = Article.new(
+  id: 15,
   user: ricky,
   name: "Buts pour enfants",
   description: "c'est un but pour enfant",
@@ -212,6 +227,7 @@ article15.remote_photo_url = url_article15
 article15.save!
 
 article16 = Article.new(
+  id: 16,
   user: francois,
   name: "Nou Camp",
   description: "J'ai aussi mes entrées VIP pour louer le Nou Camp",

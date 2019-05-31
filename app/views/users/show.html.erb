@@ -1,7 +1,16 @@
 <div class="container">
   <%= render "shared/menu_dashboard" %>
   <div class="user-show-rentals">
-    <h2> Mes reservations</h2>
+    <h2> Mes demande de réservation reçues</h2>
+    <div class="card-category">
+      <div class="cards">
+        <% bookings_recus = @user.articles.map {|article| article.bookings.where(status: true)}.flatten %>
+        <% bookings_recus.each do |reservation| %>
+          <%= render  "shared/articles_cards", article: reservation.article %>
+        <% end %>
+      </div>
+    </div>
+    <h2> Mes demande de réservation envoyées</h2>
     <div class="card-category">
       <div class="cards">
         <% @user.bookings.each do |reservation| %>
@@ -15,7 +24,7 @@
     <div class="card-category">
       <div class="cards">
         <% @user.articles.each do |article| %>
-          <%= render "booking_cards", article: article  %>
+          <%= render "shared/articles_cards", article: article %>
         <% end %>
       </div>
     </div>
