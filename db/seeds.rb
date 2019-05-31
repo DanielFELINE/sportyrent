@@ -41,20 +41,20 @@ tony.save!
 puts "3 users"
 
 url_article1 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559051707/sirmmzpb49pmksp2zecz.jpg"
-url_article2 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559055548/stify5zgshymo9yp9j6v.jpg"
-url_article3 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559129080/nqh7wla1o6envvxy2eiy.jpg"
+url_article2 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559140225/zcpaypruky6dxvf7xjjp.jpg"
+url_article3 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559138604/fobyothw7orv2ez9q8zs.jpg"
 url_article4 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559138824/tc0pbhfkkdoqu7likpy2.jpg"
 url_article5 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559218600/inh8jetyjoqtoldkl4k2.jpg"
 url_article6 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559218667/ufvkwpcmbg23qbrxvt0n.jpg"
 url_article7 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559223589/ko1ncymwyq82xzrju6pa.jpg"
 url_article8 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559228823/fnxheg1nrt0jdnmreocl.jpg"
-url_article9 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559293202/hqdefault_cww92q.jpg"
+url_article9 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559139006/y95gvkbkgnm2wtbsj3i8.jpg"
 url_article10 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559061356/mwxri4x13juyfvjugyre.jpg"
 url_article11 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559138919/d7ozouxsvofmteii3dmv.jpg"
 url_article12 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559139147/fp0kkdturgxunads5qpo.jpg"
 url_article13 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559139002/qtg8gq2p2e0lil1nchkw.jpg"
 url_article14 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559293578/s736629052416759275_p41_i2_w640_qwdghr.png"
-url_article15 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559135473/kneyfrbhswmsznhszy6r.jpg"
+url_article15 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559303999/Mini-but-de-foot-800x580_ldudfs.jpg"
 url_article16 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559139048/c8v7bdvkdhlropxmkdno.jpg"
 url_article17 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559061356/mwxri4x13juyfvjugyre.jpg"
 url_article18 = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559139184/t2avvchlwltrqdauekgl.jpg"
@@ -72,8 +72,8 @@ article1.save!
 
 article3 = Article.new(
   user: ricky,
-  name: "Ballon",
-  description: "Fait un peu mal aux avant-bras",
+  name: "Filet de beachvolley",
+  description: "Pour des matchs endiablés",
   sport: "Volleyball",
   price: 10
 )
@@ -82,7 +82,7 @@ article3.save!
 
 article2 = Article.new(
   user: tony,
-  name: "Jolie raquette de tennis",
+  name: "Jolies raquettes de tennis",
   description: "jamé servi j'aime pa le tennis",
   sport: "Tennis",
   price: 12
@@ -142,9 +142,9 @@ article8.save!
 
 article9 = Article.new(
   user: ricky,
-  name: "Maillot pour jouer au beach volley",
-  description: "Très sexy, i like",
-  sport: "Volleyball",
+  name: "1000 balles de tennis",
+  description: "Parce qu'on en a jamais trop",
+  sport: "Tennis",
   price: 4
 )
 article9.remote_photo_url = url_article9
@@ -216,7 +216,7 @@ article16 = Article.new(
   name: "Nou Camp",
   description: "J'ai aussi mes entrées VIP pour louer le Nou Camp",
   sport: "Football",
-  price: 15000000
+  price: 150000
 )
 article16.remote_photo_url = url_article16
 article16.save!
@@ -227,7 +227,7 @@ article18 = Article.new(
   name: "Raquette",
   description: "Pour faire des blagues",
   sport: "Tennis",
-  price: 5,
+  price: 5
   )
   article18.remote_photo_url = url_article18
   article18.save!
