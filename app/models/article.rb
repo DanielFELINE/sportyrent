@@ -3,6 +3,7 @@ class Article < ApplicationRecord
   after_initialize :default_values
   mount_uploader :photo, PhotoUploader
   validates :sport, inclusion: { in: SPORTS }
+  has_many :bookings, dependent: :destroy
 
   include PgSearch
   pg_search_scope :global_search,
