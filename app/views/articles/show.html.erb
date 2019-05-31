@@ -5,9 +5,9 @@
   </div>
   <div class="shadow p-3 mb-5 bg-white rounded", value="ajouter un avis">
     <%= simple_form_for [@article, @review] do |f| %>
-      <%= f.input :content, class: "shadow-sm p-3 mb-5 bg-white rounded", value: 'Ajoutez une review' %>
+      <%= f.input :content, class: "shadow-sm p-3 mb-5 bg-white rounded", label: 'Ajoutez un avis' %>
       <%= f.input :note, collection: [0, 1, 2, 3, 4, 5] %>
-      <%= f.button :submit %>
+      <%= f.button :submit, value: "j'envoie mon avis" %>
     <% end %>
   </div>
   <div >

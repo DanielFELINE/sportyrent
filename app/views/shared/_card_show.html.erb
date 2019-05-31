@@ -10,8 +10,9 @@
       <br>
       <p><%= @article.description %></p>
     </div>
-    <h2 class="card-show-pricing"></h2>
-    <h3><%= @article.price %> € par jour</h3>
+    <div class="card-show-pricing">
+      <h3><strong><%= @article.price %>€/jour</strong></h3>
+    </div>
     <% if @article.user_id == current_user.id %>
       <div class="trash-show">
         <%= link_to article_path(), method: :delete, data: { confirm: 'Are you sure?'} do %>
