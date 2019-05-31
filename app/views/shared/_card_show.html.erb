@@ -11,7 +11,7 @@
       <p><%= @article.description %></p>
     </div>
     <div class="card-show-pricing">
-      <h3><%= @article.price %>€/jour</h3>
+      <h3><strong><%= @article.price %>€/jour</strong></h3>
     </div>
     <% if @article.user_id == current_user.id %>
       <div class="trash-show">
