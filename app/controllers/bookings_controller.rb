@@ -19,6 +19,7 @@ class BookingsController < ApplicationController
     date = { starting_date: starting_date, ending_date: ending_date }
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+    @booking.status = true
     @booking.article = @article
     if @booking.save
       redirect_to article_path(@article)
