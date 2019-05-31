@@ -1,0 +1,14 @@
+<div class="booking-card">
+  <%= cl_image_tag article.photo, height: 300, width: 400, crop: :fill %>
+  <div class="booking-card-infos">
+    <div>
+      <h2><%= article.name %></h2>
+    </div>
+    <h2 class="pricing-card"><%= article.price %>€ par jour</h2>
+    <div class="trash-show">
+      <%= link_to article, method: :delete, data: { confirm: 'Are you sure?'} do %>
+        <span><i class="far fa-trash-alt"></i></span>
+      <% end %>
+    </div>
+  </div>
+</div>

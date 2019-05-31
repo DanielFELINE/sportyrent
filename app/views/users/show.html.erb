@@ -1,14 +1,24 @@
-<%= render "shared/menu_dashboard" %>
-<div class="user-show-rentals">
-  <h2> Mes reservations</h2>
-  <% @user.bookings.each do |reservation| %>
-    <%= reservation.article.name %>
-  <% end %>
+<div class="container">
+  <%= render "shared/menu_dashboard" %>
+  <div class="user-show-rentals">
+    <h2> Mes reservations</h2>
+    <div class="card-category">
+      <div class="cards">
+        <% @user.bookings.each do |reservation| %>
+          <%= render  "shared/articles_cards", article: reservation.article %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="user-show-commands">
+    <h2>Mes articles à louer</h2>
+    <div class="card-category">
+      <div class="cards">
+        <% @user.articles.each do |article| %>
+          <%= render "booking_cards", article: article  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="user-show-information"></div>
 </div>
-<div class="user-show-commands">
-  <h2>Mes articles</h2>
-  <% @user.articles.each do |article| %>
-    <%= article.name %>
-  <% end %>
-</div>
-<div class="user-show-information"></div>

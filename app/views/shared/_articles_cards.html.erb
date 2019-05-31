@@ -6,5 +6,6 @@
       <p> <%= article.description %></p>
     </div>
     <h2 class="card-trip-pricing"><%= article.price %>€ par jour</h2>
+    <%= cl_image_tag article.user.picture, class: "avatar-bordered", id: "avatar-home", alt: "avatar-large" %>
   </div>
 </div>

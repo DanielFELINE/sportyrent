@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 
   def index
     if params[:query].nil?
-      @articles = Article.all
+      @articles = Article.order(:id).all
     else
       @articles = Article.global_search(params[:query])
     end
@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
 
   def show
     @booking = Booking.new
+    @review  = Review.new
   end
 
   def create
