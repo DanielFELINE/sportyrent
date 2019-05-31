@@ -5,17 +5,17 @@
     <div class="card-category">
       <div class="cards">
         <% @user.bookings.each do |reservation| %>
-          <%= render  "shared/articles_cards", article: reservation  %>
+          <%= render  "shared/articles_cards", article: reservation.article  %>
         <% end %>
       </div>
     </div>
   </div>
   <div class="user-show-commands">
-    <h2>Mes articles</h2>
+    <h2>Mes articles à louer</h2>
     <div class="card-category">
       <div class="cards">
         <% @user.articles.each do |article| %>
-          <%= render  "shared/articles_cards", article: article  %>
+          <%= render  "user/booking_cards", article: article  %>
         <% end %>
       </div>
     </div>

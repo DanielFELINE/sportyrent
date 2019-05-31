@@ -25,6 +25,11 @@ class BookingsController < ApplicationController
       render :new
     end
   end
+
+   def destroy
+    @booking.destroy
+    redirect_to articles_path
+  end
   private
 
   def booking_params
