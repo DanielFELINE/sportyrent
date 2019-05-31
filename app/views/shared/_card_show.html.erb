@@ -17,7 +17,9 @@
         <span><i class="far fa-trash-alt"></i></span>
       <% end %>
     </div>
-    <div class="edit"><i class="far fa-edit"></i></div>
+      <%= link_to edit_article_path(@article) do %>
+        <div class="edit"><i class="far fa-edit"></i></div>
+      <% end %>
     <%= link_to 'Retour à la liste', articles_path, class: 'btn btn-outline-secondary' %>
   </div>
 </div>

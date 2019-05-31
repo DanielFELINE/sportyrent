@@ -23,7 +23,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
     @booking = Booking.new
   end
 
@@ -38,19 +37,19 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    
   end
 
   def update
+    @article.user = current_user
     if @article.update(article_params)
       redirect_to article_path(@article)
     else
       render :edit
     end
-    # Will raise ActiveModel::ForbiddenAttributesError
   end
 
   def destroy
-    set_article
     @article.destroy
     redirect_to articles_path
   end
