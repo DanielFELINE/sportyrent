@@ -1,12 +1,16 @@
 <div class="container">
   <%= render "shared/menu_dashboard" %>
-  <div class="user-show-rentals">
-    <h2> Mes demande de réservation reçues</h2>
+  <div class="user-show-rentals mt-3">
+    <h2 style="margin-top: 50px;"> Mes demande de réservation reçues</h2>
     <div class="card-category">
       <div class="cards">
         <% bookings_recus = @user.articles.map {|article| article.bookings.where(status: true)}.flatten %>
         <% bookings_recus.each do |reservation| %>
+          <div>
+          <p>Du <%= reservation.starting_date %> au <%= reservation.ending_date %></p>
           <%= render  "shared/articles_cards", article: reservation.article %>
+
+          </div>
         <% end %>
       </div>
     </div>
@@ -14,7 +18,11 @@
     <div class="card-category">
       <div class="cards">
         <% @user.bookings.each do |reservation| %>
-          <%= render  "shared/articles_cards", article: reservation.article %>
+          <div>
+            <p>Du <%= reservation.starting_date %> au <%= reservation.ending_date %></p>
+            <%= render  "shared/articles_cards", article: reservation.article %>
+
+          </div>
         <% end %>
       </div>
     </div>
