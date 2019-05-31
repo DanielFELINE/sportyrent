@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Mon profil</h1>
+  <h2>Mon prénom : <%= @user.first_name  %></h2>
+  <h2>Mon nom de famille : <%= @user.last_name  %></h2>
+  <h2>Mon adresse postale : <%= @user.address  %></h2>
+  <h2>Mon email : <%= @user.email  %></h2>
+  <h2>Mon téléphone : <%= @user.phone_number  %></h2>
+  <div class="btn-edit-profile"><%= link_to "Modifier mes informations", edit_user_registration_path(@user) %></div>
+</div>

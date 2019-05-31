@@ -10,7 +10,7 @@ url_tony = "https://res.cloudinary.com/dom4dvol9/image/upload/v1559217500/ommrsk
 francois = User.new(
   first_name: "Francois",
   last_name: "H",
-  email: "francois@H.com",
+  email: "francois@holland.com",
   password: "azerty",
   address: "1 rue basse 59000 lille",
 )
