@@ -5,7 +5,7 @@
     <div class="card-category">
       <div class="cards">
         <% @user.bookings.each do |reservation| %>
-          <%= render  "shared/articles_cards", article: reservation.article  %>
+          <%= render  "shared/articles_cards", article: reservation.article %>
         <% end %>
       </div>
     </div>
@@ -15,7 +15,7 @@
     <div class="card-category">
       <div class="cards">
         <% @user.articles.each do |article| %>
-          <%= render  "user/booking_cards", article: article  %>
+          <%= render "booking_cards", article: article  %>
         <% end %>
       </div>
     </div>
