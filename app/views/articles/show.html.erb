@@ -3,7 +3,7 @@
     <%= render "shared/card_show" %>
     <%= render "shared/form_show" %>
   </div>
-  <div class="shadow p-3 mb-5 bg-white rounded">
+  <div class="shadow p-3 mb-5 bg-white rounded", value="ajouter un avis">
     <%= simple_form_for [@article, @review] do |f| %>
       <%= f.input :content, class: "shadow-sm p-3 mb-5 bg-white rounded", value: 'Ajoutez une review' %>
       <%= f.input :note, collection: [0, 1, 2, 3, 4, 5] %>
@@ -16,8 +16,7 @@
     <% @article.reviews.each do |review| %>
       <% note_total += review.note %>
       <% reviews_number += 1 %>
-      <p class="border rouded p-3" style="background-color: white">
-
+      <p class="border rounded p-3" style="background-color: white">
         L'avis et la note de <strong> <%= current_user.first_name  %> </strong> : <%= review.note %> / 5 - <%= review.content  %></p>
     <% end %>
   </div>
