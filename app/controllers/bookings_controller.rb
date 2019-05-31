@@ -2,6 +2,10 @@ require 'date'
 
 class BookingsController < ApplicationController
 
+  def new
+    @booking = Booking.new
+  end
+
   def create
     @article = Article.find(params[:article_id])
     year_1 = params["booking"]["starting_date(1i)"]

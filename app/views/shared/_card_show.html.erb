@@ -12,14 +12,16 @@
     </div>
     <h2 class="card-show-pricing"></h2>
     <h3><%= @article.price %> € par jour</h3>
-    <div class="trash-show">
-      <%= link_to article_path(), method: :delete, data: { confirm: 'Are you sure?'} do %>
-        <span><i class="far fa-trash-alt"></i></span>
-      <% end %>
-    </div>
+    <% if @article.user_id == current_user.id %>
+      <div class="trash-show">
+        <%= link_to article_path(), method: :delete, data: { confirm: 'Are you sure?'} do %>
+          <span><i class="far fa-trash-alt"></i></span>
+        <% end %>
+      </div>
       <%= link_to edit_article_path(@article) do %>
         <div class="edit"><i class="far fa-edit"></i></div>
       <% end %>
+    <% end %>
     <%= link_to 'Retour à la liste', articles_path, class: 'btn btn-outline-secondary' %>
   </div>
 </div>
